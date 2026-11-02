@@ -1,0 +1,17 @@
+package Problems.MediumLevel;
+
+public class Leet_462 {
+   public static long minimumArray(int nums[]){
+       int moves=0;
+       int median=nums[nums.length/2];
+       for(int i=0;i<nums.length;i++){
+           moves+=Math.abs(nums[i]-median);
+       }
+       return moves;
+   }
+
+    static void main() {
+        int nums[]={1,2,3};
+        System.out.println(minimumArray(nums));
+    }
+}
